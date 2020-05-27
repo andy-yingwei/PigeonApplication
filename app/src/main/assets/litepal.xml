@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <!--
+    	定义应用程序的数据库名称。
+        默认情况下，每个数据库名称都应该以.db结尾。
+        如果你没有将你的数据库命名为.db，
+        LitePal会自动为你加上后缀。
+        例如:<dbname value="demo" />
+    -->
+    <dbname value="pigeon" />
+
+    <!--
+    	定义数据库的版本。
+    	每一次你想要要升级数据库，版本标记会有帮助。
+        修改您在mapping标记中定义的模型使版本值加1，
+        数据库升级将被自动处理而不受关注。
+        例如:<version value="1" />
+    -->
+    <version value="1" />
+
+    <!--
+    	使用映射标签在列表中定义您的模型，LitePal会这样做
+        为每个映射类创建表。支持字段在模型中定义的将被映射到列中。
+        例如:
+    	<list>
+    		<mapping class="com.test.model.Reader" />
+    		<mapping class="com.test.model.Magazine" />
+    	</list>
+    -->
+    <list>
+        <mapping class="com.example.andy.myutils.PigeonBean"/>
+
+    </list>
+
+    <!--
+        定义.db文件的位置。
+        "internal"表示.db文件将存储在内部存储的数据库文件夹中，没有人可以访问,默认设置
+        "external"表示.db文件将存储在主外部存储设备上的目录路径中，应用程序可以在该路径中放置它所拥有的每个人都可以访问的持久文件。
+        “internal”将作为默认值。
+        例如:<storage value="external" />
+    -->
+
+</litepal>
